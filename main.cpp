@@ -2,9 +2,6 @@
 #include <openvdb/io/File.h>
 #include <openvdb/tools/GridTransformer.h>
 #include <iostream>
-#include <tira/volume.h>
-#include "tira/image/colormap.h"
-#include "tira/image.h"
 #include <openvdb/tools/VolumeToMesh.h>
 #include <openvdb/tools/MeshToVolume.h>
 #include <openvdb/tools/Fastsweeping.h>
@@ -485,7 +482,7 @@ int main()
     openvdb::initialize();
 
     // Load sdf grid from file
-    openvdb::io::File file_sdf("3D_200_img_skfm.vdb");
+    openvdb::io::File file_sdf("3D_200_img.vdb");
     file_sdf.open();
     openvdb::GridBase::Ptr baseGrid_sdf;
     for (openvdb::io::File::NameIterator nameIter = file_sdf.beginName(); nameIter != file_sdf.endName(); ++nameIter) {
