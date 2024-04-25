@@ -40,5 +40,5 @@ add_executable(3D_vdb
 
 
 target_link_libraries(3D_vdb
-						PRIVATE OpenVDB::openvdb
+						#PRIVATE OpenVDB::openvdb
 )
