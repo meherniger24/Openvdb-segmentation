@@ -4,7 +4,7 @@
 #include <iostream>
 #include <openvdb/tools/VolumeToMesh.h>
 #include <openvdb/tools/MeshToVolume.h>
-#include <openvdb/tools/Fastsweeping.h>
+
 #include <openvdb/tools/GridOperators.h>
 #include <openvdb/tools/LevelsetFilter.h>
 #include <openvdb/tools/Filter.h>
