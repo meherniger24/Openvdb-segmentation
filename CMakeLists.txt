@@ -2,20 +2,16 @@
 cmake_minimum_required(VERSION 3.16)
 
 #Name your project here
-project(3D_vdb LANGUAGES CUDA CXX)
+project(3D_vdb LANGUAGES CXX)
 
 #set the module directory
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 set(CMAKE_CXX_STANDARD 20)
 
-# fix warnings with BOOST and CMake
-#set(Boost_NO_WARN_NEW_VERSIONS 1)
-#find_package(Boost REQUIRED COMPONENTS program_options)
-
 
 find_package(OpenVDB CONFIG REQUIRED)
-find_package(ZLIB REQUIRED)
-find_package(TIRA REQUIRED)
+
+
 
 #build the executable in the binary directory on MS Visual Studio
 if ( MSVC )
@@ -33,9 +29,9 @@ endif ( MSVC )
 include_directories(
 			${CMAKE_CURRENT_BINARY_DIR}
 			${CMAKE_CURRENT_SOURCE_DIR}
-			${TIRA_INCLUDE_DIRS}
+			
 )
-link_directories(${CUDA_BIN_DIRS})
+
 				
 #create an executable
 add_executable(3D_vdb
